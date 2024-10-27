@@ -1,0 +1,309 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: #fff;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: #ddd;
+}
+
+#high-contrast-toggle {
+    cursor: pointer;
+}
+
+/* Add custom styles for high contrast mode */
+.high-contrast {
+    background-color: #000;
+    color: #fff;
+}
+
+.high-contrast .navbar-dark .nav-link {
+    color: #fff;
+}
+
+.high-contrast .navbar-dark .nav-link:hover {
+    color: #ff0;
+    /* Bright yellow for high contrast */
+}
+
+.hero {
+    background-image: url('Images/your-hero-image.jpg');
+    /* Replace with your background image */
+    background-size: cover;
+    background-position: center;
+    padding: 100px 0;
+    /* Adjust padding as needed */
+    position: relative;
+    color: #fff;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Dark overlay for better text readability */
+    z-index: 1;
+}
+
+.hero .container {
+    position: relative;
+    /* Ensure the content is above the overlay */
+    z-index: 2;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    /* Adjust for responsiveness */
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.25rem;
+    margin-bottom: 30px;
+}
+
+.featured-products {
+    background-color: #1a1a1a;
+    /* Darker background for contrast */
+}
+
+.featured-products .card {
+    border: none;
+    /* Remove border for a cleaner look */
+}
+
+.featured-products .card-title {
+    font-size: 1.25rem;
+    /* Adjust title size */
+}
+
+.featured-products .card-text {
+    font-size: 1.1rem;
+    /* Adjust price size */
+}
+
+.featured-products .btn-primary {
+    background-color: #007bff;
+    /* Bootstrap primary color */
+    border-color: #007bff;
+}
+
+.featured-products .btn-outline-light {
+    color: #fff;
+    /* Keep outline buttons visible */
+    border-color: #fff;
+}
+
+.featured-products .btn-outline-light:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    /* Lighten on hover */
+}
+
+.categories {
+    background-color: #1a1a1a;
+    /* Darker background for contrast */
+}
+
+.categories .card {
+    border: none;
+    /* Remove border for a cleaner look */
+    transition: transform 0.2s;
+    /* Add a hover effect */
+}
+
+.categories .card:hover {
+    transform: scale(1.05);
+    /* Scale up on hover */
+}
+
+.categories .card-title {
+    font-size: 1.5rem;
+    /* Adjust title size */
+}
+
+.categories .btn-primary {
+    background-color: #007bff;
+    /* Bootstrap primary color */
+    border-color: #007bff;
+}
+
+.categories .btn-primary:hover {
+    background-color: #0056b3;
+    /* Darker shade on hover */
+}
+
+.about-us {
+    background-color: #1a1a1a;
+    /* Darker background for contrast */
+}
+
+.about-us h2 {
+    font-size: 2.5rem;
+    /* Adjust title size */
+}
+
+.about-us h4 {
+    font-size: 1.5rem;
+    /* Subtitle size */
+    margin-top: 20px;
+}
+
+.about-us p {
+    font-size: 1.1rem;
+    /* Paragraph text size */
+    line-height: 1.6;
+    /* Improved readability */
+    margin-bottom: 15px;
+}
+
+.about-us img {
+    margin-top: 30px;
+    /* Space above image */
+    max-width: 100%;
+    /* Ensure image is responsive */
+}
+
+.testimonials {
+    background-color: #1a1a1a;
+    /* Darker background for contrast */
+}
+
+.testimonials h2 {
+    font-size: 2.5rem;
+    /* Adjust title size */
+}
+
+.testimonial-text {
+    text-align: center;
+    /* Center-align testimonial text */
+    padding: 20px;
+    /* Add padding for better spacing */
+}
+
+.testimonial-text p {
+    font-size: 1.2rem;
+    /* Testimonial text size */
+    line-height: 1.6;
+    /* Improved readability */
+    margin-bottom: 10px;
+}
+
+.testimonial-text h5 {
+    font-size: 1.1rem;
+    /* Name size */
+    font-weight: bold;
+    /* Bold for emphasis */
+    color: #fff;
+    /* Ensure name is visible */
+}
+
+.profile-pic {
+    width: 80px;
+    /* Set width for profile pictures */
+    height: 80px;
+    /* Set height for profile pictures */
+    border-radius: 50%;
+    /* Make the image circular */
+    margin-bottom: 15px;
+    /* Space between image and text */
+    border: 2px solid #007bff;
+    /* Optional: border color to match theme */
+}
+
+/* Carousel controls */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: #007bff;
+    /* Bootstrap primary color for controls */
+}
+
+.newsletter {
+    background-color: #1a1a1a;
+    /* Darker background for contrast */
+}
+
+.newsletter h2 {
+    font-size: 2.5rem;
+    /* Adjust title size */
+}
+
+.newsletter p {
+    font-size: 1.2rem;
+    /* Adjust paragraph size */
+    margin-bottom: 20px;
+    /* Space below the paragraph */
+}
+
+.newsletter .form-control {
+    width: 300px;
+    /* Set width for email input */
+    border-radius: 0;
+    /* Remove border radius for a cleaner look */
+}
+
+.newsletter .btn-primary {
+    background-color: #007bff;
+    /* Bootstrap primary color */
+    border-color: #007bff;
+}
+
+.newsletter .btn-primary:hover {
+    background-color: #0056b3;
+    /* Darker shade on hover */
+}
+
+.footer {
+    background-color: #1a1a1a;
+    /* Darker background for contrast */
+}
+
+.footer h5 {
+    font-size: 1.5rem;
+    /* Title size */
+    margin-bottom: 15px;
+    /* Space below title */
+}
+
+.footer p {
+    font-size: 1rem;
+    /* Paragraph size */
+}
+
+.footer ul {
+    padding-left: 0;
+    /* Remove padding from list */
+}
+
+.footer ul li {
+    margin-bottom: 10px;
+    /* Space between list items */
+}
+
+.footer a {
+    text-decoration: none;
+    /* Remove underline from links */
+}
+
+.footer a:hover {
+    text-decoration: underline;
+    /* Underline on hover */
+}
+
+.social-icons a {
+    font-size: 1.5rem;
+    /* Social icon size */
+}

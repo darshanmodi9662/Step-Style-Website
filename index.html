@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step & Style</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your custom CSS -->
+</head>
+
+<body>
+
+    <header class="bg-dark text-light">
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <a class="navbar-brand" href="#">Step & Style</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#Home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#Shop">Shop</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#About">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#Contact">Contact</a>
+                    </li>
+                </ul>
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
+                </form>
+                <a href="#Cart" class="btn btn-light ml-3" id="Cart">
+                    Cart (0) <!-- Replace '0' with dynamic item count -->
+                </a>
+                <div class="ml-3">
+                    <button class="btn btn-outline-light" id="high-contrast-toggle">High Contrast</button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero bg-dark text-light text-center" id="Home">
+        <div class="container">
+            <div class="row align-items-center justify-content-center">
+                <div class="col-lg-8">
+                    <h1 class="display-4">Step into Style!</h1>
+                    <p class="lead">Discover the perfect pair for every occasion.</p>
+                    <a href="#" class="btn btn-primary btn-lg">Shop Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="featured-products py-5 bg-dark text-light">
+        <div class="container">
+            <h2 class="text-center mb-4">Featured Styles</h2>
+            <div class="row">
+                <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                    <div class="card bg-secondary text-light">
+                        <img src="Images/product1.jpg" class="card-img-top" alt="Product 1">
+                        <!-- Replace with actual image -->
+                        <div class="card-body">
+                            <h5 class="card-title">Loafers</h5>
+                            <p class="card-text">$49.99</p>
+                            <div class="d-flex justify-content-between">
+                                <a href="#Cart" class="btn btn-primary" onclick="addToCart()">Add to Cart</a>
+                                <a href="#" class="btn btn-outline-light">Quick View</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                    <div class="card bg-secondary text-light">
+                        <img src="Images/product2.jpg" class="card-img-top" alt="Product 2">
+                        <!-- Replace with actual image -->
+                        <div class="card-body">
+                            <h5 class="card-title">Derby Shoes</h5>
+                            <p class="card-text">$59.99</p>
+                            <div class="d-flex justify-content-between">
+                                <a href="#Cart" class="btn btn-primary" onclick="addToCart()">Add to Cart</a>
+                                <a href="#" class="btn btn-outline-light">Quick View</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                    <div class="card bg-secondary text-light">
+                        <img src="Images/product3.jpg" class="card-img-top" alt="Product 3">
+                        <!-- Replace with actual image -->
+                        <div class="card-body">
+                            <h5 class="card-title">Dance Shoes</h5>
+                            <p class="card-text">$69.99</p>
+                            <div class="d-flex justify-content-between">
+                                <a href="#Cart" class="btn btn-primary" onclick="addToCart()">Add to Cart</a>
+                                <a href="#" class="btn btn-outline-light">Quick View</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                    <div class="card bg-secondary text-light">
+                        <img src="Images/product4.jpg" class="card-img-top" alt="Product 4">
+                        <!-- Replace with actual image -->
+                        <div class="card-body">
+                            <h5 class="card-title">Hunter Shoes</h5>
+                            <p class="card-text">$79.99</p>
+                            <div class="d-flex justify-content-between">
+                                <a href="#Cart" class="btn btn-primary" onclick="addToCart()">Add to Cart</a>
+                                <a href="#" class="btn btn-outline-light">Quick View</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="categories py-5 bg-dark text-light" id="Shop">
+        <div class="container">
+            <h2 class="text-center mb-4">Shop by Category</h2>
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card bg-secondary text-light">
+                        <img src="Images/sneakers.jpg" class="card-img-top" alt="Sneakers">
+                        <!-- Replace with actual image -->
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Sneakers</h5>
+                            <a href="#" class="btn btn-primary">View Collection</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card bg-secondary text-light">
+                        <img src="Images/formal.jpg" class="card-img-top" alt="Formal Shoes">
+                        <!-- Replace with actual image -->
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Formal Shoes</h5>
+                            <a href="#" class="btn btn-primary">View Collection</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card bg-secondary text-light">
+                        <img src="Images/casual.jpg" class="card-img-top" alt="Casual Shoes">
+                        <!-- Replace with actual image -->
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Casual Shoes</h5>
+                            <a href="#" class="btn btn-primary">View Collection</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="about-us py-5 bg-dark text-light" id="About">
+        <div class="container">
+            <h2 class="text-center mb-4">Why Choose Step & Style?</h2>
+            <div class="row">
+                <div class="col-lg-6 mb-4">
+                    <h4>Our Story</h4>
+                    <p>
+                        At Step & Style, we believe that every step you take should be in style. Our journey began with
+                        a passion for footwear and a commitment to quality.
+                        We curate a collection that combines comfort, style, and functionality, ensuring you find the
+                        perfect pair for any occasion.
+                    </p>
+                    <p>
+                        Our mission is to provide exceptional customer service and high-quality products that empower
+                        you to express your unique style.
+                    </p>
+                </div>
+                <div class="col-lg-6 mb-4">
+                    <h4>Our Values</h4>
+                    <p>
+                        We are committed to sustainability and ethical practices in our sourcing and manufacturing
+                        processes.
+                        We prioritize quality over quantity and aim to make a positive impact on the community and the
+                        environment.
+                    </p>
+                    <p>
+                        Join us in stepping towards a better future, one stylish pair at a time!
+                    </p>
+                </div>
+            </div>
+            <div class="text-center">
+                <img src="Images/about-us-image.jpg" alt="About Us" class="img-fluid rounded">
+                <!-- Replace with actual image -->
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials py-5 bg-dark text-light">
+        <div class="container">
+            <h2 class="text-center mb-4">What Our Customers Say</h2>
+            <div id="testimonialCarousel" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="testimonial-text text-center">
+                            <img src="Images/profile1.jpg" alt="James Doe" class="profile-pic">
+                            <!-- Replace with actual image -->
+                            <p>"I absolutely love my new shoes! They are so comfortable and stylish. I get compliments
+                                all the time!"</p>
+                            <h5>- James Doe</h5>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="testimonial-text text-center">
+                            <img src="Images/profile2.jpg" alt="John Smith" class="profile-pic">
+                            <!-- Replace with actual image -->
+                            <p>"Great quality and fast shipping. Step & Style has become my go-to for all my footwear
+                                needs!"</p>
+                            <h5>- John Smith</h5>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="testimonial-text text-center">
+                            <img src="Images/profile3.jpg" alt="Bily Johnson" class="profile-pic">
+                            <!-- Replace with actual image -->
+                            <p>"I can't believe how well these shoes fit! They are perfect for my daily walks and look
+                                amazing!"</p>
+                            <h5>- Bily Johnson</h5>
+                        </div>
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#testimonialCarousel" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#testimonialCarousel" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="newsletter py-5 bg-dark text-light text-center">
+        <div class="container">
+            <h2 class="mb-4">Stay Updated!</h2>
+            <p class="lead">Get exclusive offers and the latest styles directly in your inbox.</p>
+            <form class="form-inline justify-content-center">
+                <div class="form-group mb-2">
+                    <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+                </div>
+                <button type="submit" class="btn btn-primary mb-2">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script.js"></script> <!-- Link to your custom JavaScript -->
+    <script>
+        let cartCount = 0; // Initialize cart count
+    
+        // Function to add items to the cart
+        function addToCart() {
+            cartCount++; // Increment the cart count
+            updateCartDisplay(); // Update the cart display
+        }
+    
+        // Function to update the cart display
+        function updateCartDisplay() {
+            const cartButton = document.getElementById("Cart");
+            cartButton.innerText = `Cart (${cartCount})`; // Update the button text with the current count
+        }
+    </script>    
+
+    <footer class="footer bg-dark text-light py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-3">
+                    <h5>About Us</h5>
+                    <p>Learn more about our mission and values at Step & Style. We are committed to providing stylish
+                        and comfortable footwear for everyone.</p>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#Home" class="text-light">Home</a></li>
+                        <li><a href="#Shop" class="text-light">Shop</a></li>
+                        <li><a href="#About" class="text-light">About</a></li>
+                        <li><a href="#Contact" class="text-light">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-3" id="Contact">
+                    <h5>Contact Us</h5>
+                    <p>Email: support@stepandstyle.com</p>
+                    <p>Phone: (123) 456-7890</p>
+                    <div class="social-icons">
+                        <a href="#" class="text-light me-2"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-light me-2"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-light me-2"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-4">
+                <p>&copy; 2024 Step & Style. All Rights Reserved.</p>
+                <a href="#" class="text-light">Privacy Policy</a> |
+                <a href="#" class="text-light">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
